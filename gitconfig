@@ -1,0 +1,5 @@
+[user]
+	name = Hannu Varpiola
+	email = hannu.varpiola@gmail.com
+[core]
+	excludesfile = ~/.cvsignore
