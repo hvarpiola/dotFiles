@@ -1,6 +1,41 @@
 "Automatic reload of .vimrc
 autocmd! bufwritepost .vimrc source %
 
+"Enable pathogen and put syntax highlights on
+filetype off
+call pathogen#infect()
+filetype plugin indent on
+syntax on
+
+"Leader key
+let mapleader = ","
+
+"Test, make jj in insert mode act like esc key
+inoremap jj <ESC>
+
+"Tame the searching
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+
+"Leader + space cleans the search
+nnoremap <leader><space> :noh<cr>
+
+"Use tab to find matching parentless
+nnoremap <tab> % 
+vnoremap <tab> %
+
+"Save the file if focus is lost
+au FocusLost * :wa
+
+"open nerdTree automatically if file sis not inputted
+autocmd vimenter * if !argc() | NERDTree | endif
+
 "Rebind window movement
 map <c-j> <c-w>j
 map <c-k> <c-w>k
@@ -11,7 +46,7 @@ map <c-h> <c-w>h
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
-"Easier moving of code blocks 
+"Easier moving of code blocks
 
 vnoremap < <gv
 vnoremap > >gv
@@ -20,14 +55,9 @@ vnoremap > >gv
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
-"Clor scheme
+"Color scheme
 set t_Co=256
 color wombat256mod
-
-"Enable syntax highlighting
-filetype off
-filetype plugin indent on
-syntax on
 
 "Showing linenumbers and length
 set number
