@@ -3,3 +3,5 @@
 	email = hannu.varpiola@gmail.com
 [core]
 	excludesfile = ~/.cvsignore
+    editor = vim
+
