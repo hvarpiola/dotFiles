@@ -1,0 +1,9 @@
+git clone git@bitbucket.org:hvarpiola/dotfiles.git
+
+ln -s ~/dotfiles/cvsignore .cvsignore 
+ln -s ~/dotfiles/gitconfig .gitconfig 
+ln -s ~/dotfiles/oh-my-zsh .oh-my-zsh
+ln -s ~/dotfiles/vim .vim
+ln -s ~/dotfiles/vimrc .vimrc
+ln -s ~/dotfiles/zshrc .zshrc
+
