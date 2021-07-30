@@ -1,12 +1,6 @@
 "Automatic reload of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-"Enable pathogen and put syntax highlights on
-filetype off
-call pathogen#infect()
-filetype plugin indent on
-syntax on
-
 "Vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -15,29 +9,15 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'https://github.com/ycm-core/YouCompleteMe.git'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
+Plugin 'https://github.com/sjl/gundo.vim'
+Plugin 'gingerhot/conque-term-vim'
+Plugin 'https://github.com/preservim/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,7 +52,7 @@ noremap <F1> <nop>
 inoremap <F1> <nop>
 
 "quick key for gundo mapping
-" nnoremap <F5> :GundoToggle<CR>
+"nnoremap <F5> :GundoToggle<CR>
 
 "Rebind window movement
 map <c-j> <c-w>j
@@ -90,8 +70,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 "ConqueMappings
-" nnoremap <F4> :ConqueTermVSplit zsh<CR>
-" let g:ConqueTerm_EscKey = '<ESC>'
+nnoremap <F4> :ConqueTermVSplit bash<CR>
+let g:ConqueTerm_EscKey = '<ESC>'
 
 "Test, make jj in insert mode act like esc key
 inoremap jj <ESC>
@@ -100,14 +80,13 @@ inoremap jj <ESC>
 nnoremap <leader><space> :noh<cr>
 
 "Leader commands
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 "open new vertical split and switch over to it
 nnoremap <leader>w <C-w>v<C-w>l
 "quickedit for vimrc
 nnoremap <leader>ev <C-w><C-v><c-l>:e $MYVIMRC<cr<c-l>:e $MYVIMRC<cr>
 
 "Use tab to find matching parentless
-nnoremap <tab> % 
+nnoremap <tab> %
 vnoremap <tab> %
 
 "Save the file if focus is lost
