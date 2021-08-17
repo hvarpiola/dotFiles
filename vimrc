@@ -101,8 +101,8 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 "nnoremap <C-f> :NERDTreeFind<CR> Conflicts with back up
 
 "Show whitepace
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
+"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+"au InsertLeave * match ExtraWhitespace /\s\+$/
 
 "Color scheme
 set t_Co=256
@@ -124,10 +124,6 @@ set shiftround
 set expandtab
 
 " Wildmenu completion
-set wildmenu
-set wildmode=list:longest
-
-" Ignores
 set wildmenu
 set wildmode=list:longest
 
@@ -157,7 +153,7 @@ set wildignore+=lib
 " don't want to use Capslock.
 "
 " To use it you type the name of the constant in lowercase.  While your
-" cursor is at the end of the word, press <c-u> to uppercase it, and then
+"cursor is at the end of the word, press <c-u> to uppercase it, and then
 " continue happily on your way:
 "
 "                            cursor
