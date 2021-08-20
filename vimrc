@@ -101,8 +101,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 "nnoremap <C-f> :NERDTreeFind<CR> Conflicts with back up
 
 "Show whitepace
-"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-"au InsertLeave * match ExtraWhitespace /\s\+$/
+
 
 "Color scheme
 set t_Co=256

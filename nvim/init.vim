@@ -1,6 +1,15 @@
+call plug#begin('~/.config/nvim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdcommenter'
+Plug 'darthdeus/a.vim'
+Plug 'morhetz/gruvbox'
+Plug 'dense-analysis/ale'
+call plug#end()
+
 syntax on                                       " enable syntax highlighting
 set background=dark                             " we like it dark!
-try | colorscheme gruvbox | catch | endtry      " use this awesome theme if possible
 highlight Pmenu ctermbg=black guibg=black     | " fix popup color so it's easier to read
 filetype plugin on                              " load plugins based on file type
 filetype indent on                              " load indent settings based on file type
@@ -24,6 +33,7 @@ set sidescrolloff=7                             " keep 7 characters visible to t
 set sidescroll=1                                " scroll left/right one character at a time
 set splitbelow splitright                       " put new windows below or to the right
 " hv specific
+colorscheme gruvbox                             " use this awesome theme if possible
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
@@ -33,23 +43,6 @@ set tw=79
 set nowrap
 set colorcolumn=80
 highlight ColorColumn ctermbg=233 
-
-
-call plug#begin('~/.config/nvim/plugged')
-
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdcommenter'
-Plug 'darthdeus/a.vim'
-Plug 'morhetz/gruvbox'
-
-" Initialize plugin system
-call plug#end()
-
 
 let g:yankring_clipboard_monitor=0              " don't worry about the system clipboard, thanks YankRing
 let g:yankring_n_keys = 'Y D'                   " by default: 'Y D x X', but I don't like x and X adding chars to my yank history
