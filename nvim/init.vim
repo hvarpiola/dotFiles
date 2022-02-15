@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'pechorin/any-jump.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -38,7 +39,7 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 set signcolumn=number
-set number
+set number relativenumber
 set tw=79
 set nowrap
 set colorcolumn=80
