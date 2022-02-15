@@ -1,0 +1,3 @@
+vim/autoload/*
+nvim/plugged/*
+vim/bundle/*
