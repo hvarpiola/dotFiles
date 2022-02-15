@@ -50,7 +50,7 @@ nnoremap x "_x
 nnoremap X "_X
 
 let mapleader=","                               " set , as the leader for mappings
-inoremap jj <ESC>                               " Set jj to exit insert mode
+" inoremap jj <ESC>                               " Set jj to exit insert mode
 nnoremap <leader><space> :noh<cr>               " clear the search
 let g:ctrlp_map = '<leader>jf'                  " open ctrl-p fuzzy finder (mnemonic: 'jump file')
 nnoremap <Leader>jt :CtrlPTag<CR>
@@ -69,7 +69,7 @@ endif
 tnoremap <Esc> <C-\><C-n>
 
 " buffer and window mappings
-nmap <leader>w <c-w>
+" Stupid? nmap <leader>w <c-w>
 nmap <leader><tab> <c-^>
 nmap <leader>wa <c-w>v:A<CR>
 nmap <leader>wC :w \| %bd \| e#<CR>
