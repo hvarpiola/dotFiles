@@ -45,6 +45,7 @@ set nowrap
 set colorcolumn=80
 highlight ColorColumn ctermbg=233 
 
+let mapleader=","                               " set , as the leader for mappings
 " Remap C-c to <esc>
 nmap <c-c> <esc>
 imap <c-c> <esc>
@@ -57,7 +58,7 @@ tnoremap <Esc> <C-\><C-n>
 " buffer and window mappings
 nmap <leader><tab> <c-^>
 nmap <leader>wa <c-w>v:A<CR>
-nmap <leader>wC :w \| %bd \| e#<CR>
+nmap <leader>wC :w \| %bd \| e#<CRk
 
 " move line mappings
 nnoremap <c-j> :m .+1<CR>==
@@ -203,7 +204,6 @@ let g:yankring_n_keys = 'Y D'                   " by default: 'Y D x X', but I d
 nnoremap x "_x
 nnoremap X "_X
 
-let mapleader=","                               " set , as the leader for mappings
 nnoremap <leader><space> :noh<cr>               " clear the search
 
 " ctrl-p

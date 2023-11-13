@@ -1,0 +1,14 @@
+,jf => Jump to file
+
+control + j => move line down
+control + k => move line up
+
+
+ciw => correct word 
+cw => correct end of word
+
+control + f => Page down
+control + b => Page Up
+
+,<space> => clean search results
+
