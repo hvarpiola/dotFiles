@@ -65,7 +65,7 @@ nnoremap <c-j> :m .+1<CR>==
 nnoremap <c-k> :m .-2<CR>==
 
 " ignore certain patterns when completing file names
-set wildignore+=*/node_modules/*,*/tmp/*,*/target/*,*/build/*
+set wildignore+=*/node_modules/*,*/tmp/*,*/target/*,*/build/*,*.o,*.so,*.tmp,*.temp
 
 if has("nvim")
   set inccommand=nosplit                        " show substitutions incrementally
@@ -216,6 +216,7 @@ nnoremap <Leader>jj <c-]>
 let g:any_jump_disable_default_keybindings = 1  " open AnyJump (mnemonic: 'jump definition')
 nnoremap <leader>jd :AnyJump<CR>
 xnoremap <leader>jd :AnyJumpVisual<CR>
+let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.o']
 
 " ALE
 " auto format code
